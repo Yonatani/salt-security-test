@@ -5,8 +5,8 @@ import Table from './components/common/Table/Table';
 import Checked from './components/common/Checked/Checked';
 import Label from './components/common/Label/Label';
 import SearchBar from './components/common/SearchBar/SearchBar';
-import './app.less';
 import Tabs from './components/Tabs/Tabs';
+import './app.less';
 
 const tabs = ['Request', 'Response'];
 
@@ -93,7 +93,7 @@ function App() {
 					onApply={handleApplyFilters}
 					onResetFilters={handleResetFilters}
 				/>
-				{<Table columns={columnsScheme.map((col) => col.key)} sections={filteredData} sectionLabels={sectionLabels} />}
+				<Table columns={columnsScheme.map((col) => col.key)} sections={filteredData} sectionLabels={sectionLabels} />
 			</div>
 		</div>
 	);
