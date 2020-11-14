@@ -1,0 +1,35 @@
+@import (reference) "../../colors";
+@import (reference) "../../typography";
+
+
+.header-container {
+  padding: 30px;
+  .request-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    .request-method {
+      .header-2;
+      color: @secondary-purple;
+      margin-right: 12px;
+      text-align: center;
+    }
+    .request-path {
+      .header-1;
+      color: @primary-purple;
+    }
+  }
+
+  .breadcrumbs-container {
+    margin-left: 16px;
+  }
+
+  .divider {
+    border: 1px @light-gray solid;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+}

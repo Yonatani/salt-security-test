@@ -1,0 +1,26 @@
+@import (reference) "../../../colors";
+@import (reference) "../../../typography";
+
+
+.checked-container {
+  --color: @primary-purple;
+  padding-right: 24px;
+  padding-left: 24px;
+  font-weight: bold;
+  user-select: none;
+  color: var(--color);
+  border: 1px solid var(--color);
+
+  &.purple {
+    --color: @secondary-purple;
+  }
+
+  &.blue {
+    --color: @dark-blue;
+  }
+
+  &.is-checked {
+    color: @white;
+    background-color: var(--color);
+  }
+}

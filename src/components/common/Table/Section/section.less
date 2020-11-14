@@ -1,0 +1,33 @@
+@import (reference) "../../../../colors";
+@import (reference) "../../../../typography";
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4px;
+
+    .section-arrow {
+      background-color: @light-gray;
+      border-radius: 50%;
+      margin-right: 4px;
+
+      svg {
+        fill: @secondary-purple;
+      }
+    }
+
+    .section-title {
+      font-weight: bold;
+    }
+  }
+
+  .bp3-code-block {
+    box-shadow: 1px 2px 4px 2px rgba(65, 74, 119, 0.2);
+    margin: 8px 0px;
+  }
+}

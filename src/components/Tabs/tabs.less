@@ -1,0 +1,60 @@
+@import (reference) "../../colors";
+@import (reference) "../../typography";
+
+.tabs {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: @light-gray;
+	padding-left: 24px;
+	height: 50px;
+	box-shadow: 0 4px 2px -2px #D3D3D3;
+
+	.tab {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding-top: 0;
+		margin-right: 32px;
+		cursor: pointer;
+
+		.tab-label {
+			display: flex;
+			height: 100%;
+			align-items: center;
+			position: relative;
+			padding: 0 8px;
+			transition: all 200ms ease-in-out 0ms;
+			color: @dark-gray;
+			font-weight: bold;
+
+			&:hover {
+				color: @primary-purple;
+			}
+
+			&:after {
+				content: ' ';
+				position: absolute;
+				width: 100%;
+				transform: scaleX(0);
+				transition: transform 200ms ease-out;
+				background-color: @primary-purple;
+				bottom: -2px;
+				height: 3px;
+				left: 0;
+			}
+		}
+
+		&.selected {
+			.tab-label {
+				opacity: 1;
+				color: @primary-purple;
+				font-weight: bold;
+
+				&:after {
+					transform: scaleX(1.1);
+				}
+			}
+		}
+	}
+}

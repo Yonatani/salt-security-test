@@ -1,0 +1,36 @@
+@import (reference) "../../colors";
+@import (reference) "../../typography";
+
+
+.breadcrumbs-container {
+  display: flex;
+  flex-direction: row;
+
+  .breadcrumb-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+
+    .path {
+      margin-right: 4px;
+      .caption-bold;
+      color: @primary-purple;
+
+      &.last-breadcrumb {
+        color: @primary-purple;
+        font-weight: unset;
+      }
+    }
+    .icon {
+      align-items: center;
+      display: flex;
+      svg {
+        path {
+          fill: @primary-purple;
+        }
+      }
+    }
+  }
+}
